@@ -91,3 +91,23 @@ body{
         float: none;
     }
 }
+
+/* Notes about Flexbox layout */
+/* 
+Display: flex --> puts things inline
+flex-direction: column --> can adjust things to be like block alignment but has good properties
+align-items: center --> most used and important, centers vertically.
+aling-items: flex-end --> pushed all elements to bottom of container.
+justify-content: flex-start --> Default setting, but aligns horizontally.
+justify-content: center --> centers it horizontally.
+justify-content: flex-end --> psuhes to the end horizontally.
+justify-content: space-around --> space around and between elements are equal.
+justify-content: space-between --> pushes furthest most elements to the side, then equalizes space between all elements.
+
+Align-items and Justify-content can be used together to style elements.
+
+Align-items and Justify-content and Flex-direction can be used together to style elements.
+If Flex-direction == Column:
+    justify-content aligns vertically
+    align-items aligns horizontally
+*/
