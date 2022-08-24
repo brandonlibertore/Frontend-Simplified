@@ -133,6 +133,7 @@ nav{
     font-weight: bold;
 }
 
+
 /* ABOUT ME SECTION */
 
 #about-me{
@@ -251,6 +252,7 @@ nav{
 }
 
 .about-me__img{
+    padding-top: 12px;
     width: 100%;
     animation: fade-in 1200ms 800ms backwards;
 }
@@ -311,6 +313,7 @@ nav{
 .language:hover .language__name{
     transform: scale(1);
     opacity: 1;
+    font-weight: 700;
 }
 
 /* PROJECTS */
@@ -464,7 +467,7 @@ footer{
     }
 
     .language{
-        width: calc(100%/3);
+        width: calc(100%/2);
     }
 
     .project__description--para{
