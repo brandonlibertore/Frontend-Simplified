@@ -520,6 +520,10 @@ footer{
         justify-content: center;
     }
 
+    .bullet__info{
+        display: none;
+    }
+
     .project__description--title{
         line-height: 1;
         text-align: center;
