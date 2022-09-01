@@ -241,7 +241,7 @@ button:hover{
 }
 
 .undraw__img--small{
-    width: 0%;
+    display: none;
 }
 
 /* FEATURES */
@@ -378,6 +378,10 @@ button:hover{
     width: 50%;
 }
 
+.steps__img--small{
+    display: none;
+}
+
 .steps__img{
     width: 100%;
 }
@@ -458,6 +462,10 @@ button:hover{
 
 .values__img{
     width: 100%;
+}
+
+.values__img--small{
+    display: none;
 }
 
 /* PRICING */
@@ -774,6 +782,7 @@ button:hover{
     }
 
     .undraw__img--small{
+        display: inline;
         width: 100%;
         padding-bottom: 3rem;
     }
@@ -820,10 +829,12 @@ button:hover{
 
     /* QUALITY WORK */
     .hero__img--wrapper-small{
+        display: inline;
         border: 1px solid #dedede;
     }
 
     .hero__img--small{
+        display: inline;
         width: 100%;
     }
 
@@ -856,6 +867,7 @@ button:hover{
 
     /* STEPS */
     .steps__img--small{
+        display: inline;
         width: 100%;
     }
 
@@ -893,6 +905,7 @@ button:hover{
 
     /* VALUES */
     .values__img--small{
+        display: inline;
         width: 100%;
     }
     
@@ -973,6 +986,7 @@ button:hover{
 
     /* TESTIMONIALS */
     .testimonial__img--small{
+        display: inline;
         width: 100%;
     }
 
