@@ -40,6 +40,19 @@
                             <a href="" class="link quality__btn">Sign Up</a>
                         </li>
                     </ul>
+                    <button class="btn__menu" onclick="openMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="menu__backdrop">
+                        <button class="btn__menu btn__menu--close no-cursor" onclick="closeMenu()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <ul class="menu__links">
+                            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Home</a></li>
+                            <li class="menu__list"><a href="#features" class="menu__link" onclick="closeMenu()">Books</a></li>
+                            <li class="menu__list"><a href="#" class="menu__link no-cursor" onclick="closeMenu()">Contact</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </section>
@@ -66,6 +79,9 @@
                 <div class="about__right">
                     <img src="./assets/about__img.svg" class="undraw__img" alt="">
                 </div>
+            </div>
+            <div class="column">
+                <img src="./assets/about__img.svg" class="undraw__img--small" alt="">
             </div>
         </section>
 
@@ -166,6 +182,11 @@
 
         <!-- Quality Work -->
         <section id="quality__work">
+            <div class="row">
+                <figure class="hero__img--wrapper-small">
+                    <img src="./assets/hero-screenshot-1.40a097b5.png" class="hero__img--small" alt="">
+                </figure>
+            </div>
             <div class="row row__padding">
                 <div class="work__left">
                     <h2 class="quality__title">
@@ -191,6 +212,9 @@
 
         <!-- Steps -->
         <section id="steps">
+            <div class="row">
+                <img src="./assets/hero-screenshot-2.241aac1f.png" class="steps__img--small" alt="">
+            </div>
             <div class="row row__padding">
                 <div class="steps__left">
                     <img src="./assets/hero-screenshot-2.241aac1f.png" class="steps__img" alt="">
@@ -241,6 +265,9 @@
 
         <!-- VALUES -->
         <section id="values">
+            <div class="row">
+                <img src="./assets/prototype-illustration.21bc4b3f.svg" class="values__img--small" alt="">
+            </div>
             <div class="row row__padding">
                 <div class="values__left">
                     <h3><span class="text__purple">VALUES</span></h3>
@@ -258,7 +285,7 @@
                                 We promise to offer you the best rate we can - at par with the industry standard.
                             </p>
                         </div>
-                        <div class="inner_right">
+                        <div class="inner__right">
                             <div class="inner__title">
                                 <img src="" alt="">
                                 <h3>Professionalism</h3>
@@ -279,60 +306,62 @@
         <!-- PRICING -->
         <section id="pricing">
             <div class="row row__padding column">
-                <h3><span class="text__purple">VALUES</span></h3>
+                <h3><span class="text__purple">PRICING</span></h3>
                 <h1 class="values__subtitle">Reasonable & Flexible <span class="text__purple">Plans.</span></h1>
                 <p class="pricing__para">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <div class="price__options">
-                    <div class="price price1">
-                        <h2 class="price__title">PERSONAL</h2>
-                        <h1 class="price__amount">$17.99</h1>
-                        <h2 class="subscription__length1">MONTHLY</h2>
+                <div class="wrap">
+                    <div class="plan1">
+                        <div class="price price1">
+                            <h2 class="price__title">PERSONAL</h2>
+                            <h1 class="price__amount">$17.99</h1>
+                            <h2 class="subscription__length1">MONTHLY</h2>
+                        </div>
+                        <div class="who__plans who__plans1">
+                            <h2 class="plans__title">For Individuals</h2>
+                            <h4 class="attributes">30 templates</h3>
+                            <h4 class="attributes">7 Landing pages</h3>
+                            <h4 class="attributes">12 Internal Pages</h3>
+                            <h4 class="attributes">Basic Assistance</h3>
+                        </div>
+                        <div class="buy buy1">
+                            <button class="quality__btn buy__btn1">BUY NOW</button>
+                        </div>
                     </div>
-                    <div class="price price2">
-                        <h2 class="price__title">BUSINESS</h2>
-                        <h1 class="price__amount">$37.99</h1>
-                        <h2 class="subscription__length2">MONTHLY</h2>
+                    <div class="plan2">
+                        <div class="price price2">
+                            <h2 class="price__title">BUSINESS</h2>
+                            <h1 class="price__amount">$37.99</h1>
+                            <h2 class="subscription__length2">MONTHLY</h2>
+                        </div>
+                        <div class="who__plans who__plans2">
+                            <h2 class="plans__title">Small Businesses</h2>
+                            <h4 class="attributes white">30 templates</h3>
+                            <h4 class="attributes white">15 Landing pages</h3>
+                            <h4 class="attributes white">22 Internal Pages</h3>
+                            <h4 class="attributes white">Priority Assistance</h3>
+                        </div>
+                        <div class="buy buy2">
+                            <button class="quality__btn buy__btn2">BUY NOW</button>
+                        </div>
                     </div>
-                    <div class="price price3">
-                        <h2 class="price__title">ENTERPRISE</h2>
-                        <h1 class="price__amount">$57.99</h1>
-                        <h2 class="subscription__length1">MONTHLY</h2>
-                    </div>
-                </div>
-                <div class="plans">
-                    <div class="who__plans who__plans1">
-                        <h2 class="plans__title">For Individuals</h2>
-                        <h4 class="attributes">30 templates</h3>
-                        <h4 class="attributes">7 Landing pages</h3>
-                        <h4 class="attributes">12 Internal Pages</h3>
-                        <h4 class="attributes">Basic Assistance</h3>
-                    </div>
-                    <div class="who__plans who__plans2">
-                        <h2 class="plans__title">For Small Businesses</h2>
-                        <h4 class="attributes white">30 templates</h3>
-                        <h4 class="attributes white">15 Landing pages</h3>
-                        <h4 class="attributes white">22 Internal Pages</h3>
-                        <h4 class="attributes white">Priority Assistance</h3>
-                    </div>
-                    <div class="who__plans who__plans3">
-                        <h2 class="plans__title">For Large Companies</h2>
-                        <h4 class="attributes">90 templates</h3>
-                        <h4 class="attributes">27 Landing pages</h3>
-                        <h4 class="attributes">37 Internal Pages</h3>
-                        <h4 class="attributes">Personal Assistance</h3>
-                    </div>
-                </div>
-                <div class="buy__now">
-                    <div class="buy buy1">
-                        <button class="quality__btn buy__btn1">BUY NOW</button>
-                    </div>
-                    <div class="buy buy2">
-                        <button class="quality__btn buy__btn2">BUY NOW</button>
-                    </div>
-                    <div class="buy buy3">
-                        <button class="quality__btn buy__btn3">BUY NOW</button>
+                    <div class="plan3">
+                        <div class="price price3">
+                            <h2 class="price__title">ENTERPRISE</h2>
+                            <h1 class="price__amount">$57.99</h1>
+                            <h2 class="subscription__length1">MONTHLY</h2>
+                        </div>
+                        <div class="who__plans who__plans3">
+                            <h2 class="plans__title">Large Companies</h2>
+                            <h4 class="attributes">90 templates</h3>
+                            <h4 class="attributes">27 Landing pages</h3>
+                            <h4 class="attributes">37 Internal Pages</h3>
+                            <h4 class="attributes">Personal Assistance</h3>
+                        </div>
+                        <div class="buy buy3">
+                            <button class="quality__btn buy__btn3">BUY NOW</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -340,12 +369,15 @@
 
         <!-- TESTIMONIALS -->
         <section id="testimonials">
-            <div class="row row__padding">
+            <div class="row">
+                <img src="./assets/love-illustration.c759090f.svg" class="testimonial__img--small" alt="">
+            </div>
+            <div class="row row__padding middle">
                 <div class="testimonials__left">
                     <img src="./assets/love-illustration.c759090f.svg" class="testimonial__img" alt="">
                 </div>
                 <div class="testimonials__right">
-                    <h2><span class="text__purple">TESTIMONIALS</span></h2>
+                    <h2 class="testimonials__title"><span class="text__purple">TESTIMONIALS</span></h2>
                     <h2 class="testimonials__subtitle">Our Clients <span class="text__purple">Love Us.</span></h1>
                     <p class="testimonials__para">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.
@@ -360,7 +392,7 @@
     <!-- FOOTER -->
     <section id="footer">
         <footer>
-            <div class="row row__padding center">
+            <div class="row row__padding center foot__wrap">
                 <div class="footer__section">
                     <ul class="footer__links">
                         <li>
