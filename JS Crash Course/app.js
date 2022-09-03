@@ -211,3 +211,102 @@ function changeTitleToRed(){
 function toggleDarkMode(){
     document.querySelector("body").classList.toggle("dark-theme")
 }
+
+// PROMISES
+console.log(fetch("https://jsonplaceholder.typicode.com/users/1"))
+
+const emailRef = document.querySelector(".email");
+console.log(emailRef)
+
+// 2 Approaches to access the data from a promise:
+
+// Method 1: Then method
+// Call the .then method on the fetch API call which needs a callback function
+// From there convert the response to a frontend readable object JSON
+// Finally we take the elements of those within the JSON so that we have the proper objects
+fetch("https://jsonplaceholder.typicode.com/users/1").then((response) => {
+    response.json().then((data) => {console.log(data)
+    emailRef.innerHTML = data.email;
+    });
+})
+
+// To make the approach above easier to read and understand follow the below method:
+fetch("https://jsonplaceholder.typicode.com/users/1").then((response) => {
+    return response.json()
+})
+.then(data => {
+    console.log(data)
+    emailRef.innerHTML = data.email
+})
+
+
+// Method 2: Async/Await method (Better Practice and Cleaner)
+// In order to use await, we need an Async function
+// Call await on original backend to fetch a response
+// Once response is retrieved we call await again on the response
+// inorder to convert it to a readable JSON object for the frontend
+async function main(){
+    const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+    const data = await response.json()
+    emailRef.innerHTML = data.email
+}
+
+main()
+
+// CREATING A PROMISE
+// If the Promise is successful we want to resolve it
+// Else we want to reject it
+function getSubscriptionStatus(){
+    return new Promise((resolve, reject) => {
+        resolve("VIP")
+    })
+}
+
+// We do not need to call .json() here because this object is already known
+// and created in the frontend so no conversion is needed.
+// Method 1:
+getSubscriptionStatus().then(response => console.log(response))
+
+// Method 2:
+const statusRef = document.querySelector(".status");
+
+async function main2(){
+    const response = await getSubscriptionStatus();
+    statusRef.innerHTML = response
+}
+
+main2()
+
+// PRACTICE PROBLEM
+// Create new promise that follows the below response
+// If an error occurs, catch the error and display it to the frontend.
+const videoRef = document.querySelector(".video")
+
+function getVideo(subscriptionStatus){
+    return new Promise((resolve, reject) => {
+        if (subscriptionStatus === "VIP"){
+            resolve("show video")
+        }
+        else if (subscriptionStatus === "FREE"){
+            resolve("show trailer")
+        }
+        else{
+            reject("no video")
+        }
+    })
+}
+
+// We use try-catch blocks to catch thrown errors. In somecases we will use
+// these errors to be displayed on the frontend display.
+async function main3(){
+    try{
+        const video = await getVideo("VIP");
+        const trailer = await getVideo("FREE");
+        const noVideo = await getVideo("BRUH");
+    }
+    catch (e){
+        videoRef.innerHTML = e
+    }
+}
+
+main3()
