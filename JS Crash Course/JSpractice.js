@@ -118,3 +118,62 @@ function convertToBoolean(arr){
 }
 console.log(convertToBoolean(["", [], 0, null, undefined, "0"]))
 console.log(convertToBoolean([500, 0, "david", "", []]))
+
+function showRating(num){
+    let stars = ""
+    for (let i = 0; i < Math.floor(num); i++){
+        if (i != Math.floor(num) - 1){
+            stars += "* "
+        }
+        else{
+            stars += "*"
+        }
+    }
+    let period = ""
+    if (num > 0.5){
+        period = num % Math.floor(num) > 0.5 ? "." : ""
+    }
+    else if (num == 0.5){
+        period = "."
+    }
+    return stars + period
+}
+console.log(showRating(0.5))
+
+function sortLowToHigh(arr){
+    // for (let i = 0; i < arr.length; i++){
+    //     for (let j = 0; j < arr.length; j++){
+    //         if (arr[j] > arr[j + 1]){
+    //             let holder = arr[j]
+    //             arr[j] = arr[j + 1]
+    //             arr[j + 1] = holder
+    //         }
+    //     }
+    // }
+    return arr.sort((a,b) => a-b)
+}
+console.log(sortLowToHigh([10,15,4,2,7,9,1,3]))
+
+function sortHighToLow(arr){
+    return arr.sort((a,b) => b.price - a.price);
+}
+console.log(sortHighToLow([{id: 1, price: 50}, {id: 2, price: 30}, {id: 3, price: 60}, {id: 4, price: 10}]))
+
+async function postsByUser(userId){
+    const API_JSONPLACEHOLDER = "https://jsonplaceholder.typicode.com/posts";
+    const response = await fetch(API_JSONPLACEHOLDER)
+    const data = await response.json()
+    let newData = data.filter(elements  => elements.userId == userId)
+    return newData
+}
+console.log(postsByUser(4))
+
+async function firstSixIncomplete(){
+    const API_JSONPLACEHOLDER = "https://jsonplaceholder.typicode.com/todos";
+    const response = await fetch(API_JSONPLACEHOLDER)
+    const data = await response.json()
+    let newData = data.filter(elements  => elements.completed === false).slice(0, 6)
+    return newData
+}
+
+console.log(firstSixIncomplete())
